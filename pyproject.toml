@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hisa"
+version = "0.1.0"
+description = "HiSA (Hidden Sparse Attention): attention sparse in the hidden dimension of the query-key product, set by RoPE rotation angles"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.10"
+authors = [{ name = "Ambroise Borbely" }, { name = "Mathieu Salzmann" }, { name = "Olivier Verscheure" }]
+keywords = ["attention", "sparse attention", "RoPE", "FlashAttention", "Triton", "LLM"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# Tested with torch 2.9.1 (CUDA 12.8), triton 3.5.1 and transformers 5.18.0.
+dependencies = ["torch>=2.9", "triton>=3.5"]
+
+[project.optional-dependencies]
+hf = ["transformers>=5.0"]
+test = ["pytest", "transformers>=5.0", "numpy<2.4"]  # numpy 2.4 breaks the Triton 3.5 CPU interpreter
+
+[project.urls]
+Paper = "https://arxiv.org/abs/XXXX.XXXXX"
+Code = "https://github.com/ambroise-b/hisa"
+
+[tool.setuptools.packages.find]
+include = ["hisa*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

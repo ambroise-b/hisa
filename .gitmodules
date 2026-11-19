@@ -1,0 +1,4 @@
+[submodule "third_party/flash-attention"]
+	path = third_party/flash-attention
+	url = https://github.com/ambroise-b/flash-attention-hisa.git
+	branch = hisa

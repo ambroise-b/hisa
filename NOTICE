@@ -1,0 +1,14 @@
+HiSA (Hidden Sparse Attention)
+Copyright 2026 Ambroise Borbely, Mathieu Salzmann, Olivier Verscheure
+(Swiss Data Science Center and EPFL)
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository includes or depends on third-party code:
+
+- hisa/integrations/hf.py is derived from the LlamaAttention class of Hugging Face transformers 5.18.0
+  (Apache License 2.0, Copyright The HuggingFace Inc. team and EleutherAI); the modifications are listed in
+  the file header.
+- third_party/flash-attention is a fork of FlashAttention (https://github.com/Dao-AILab/flash-attention),
+  BSD 3-Clause License, Copyright the FlashAttention contributors; the HiSA kernels are added in a single
+  commit on top of upstream commit bb25ba3c (version 3.0.1).
