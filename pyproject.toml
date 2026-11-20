@@ -24,7 +24,7 @@ hf = ["transformers>=5.0"]
 test = ["pytest", "transformers>=5.0", "numpy<2.4"]  # numpy 2.4 breaks the Triton 3.5 CPU interpreter
 
 [project.urls]
-Paper = "https://arxiv.org/abs/XXXX.XXXXX"
+Paper = "https://arxiv.org/abs/2611.26363"
 Code = "https://github.com/ambroise-b/hisa"
 
 [tool.setuptools.packages.find]

@@ -1,7 +1,7 @@
 # HiSA: Hidden Sparse Attention
 
 Official implementation of **HiSA: Sparsifying the Hidden Dimension of RoPE Attention in LLMs**
-([paper](https://arxiv.org/abs/XXXX.XXXXX)).
+([paper](https://arxiv.org/abs/2611.26363)).
 
 With rotary position embeddings (RoPE), the attention score between a query and a key is a sum of one part per
 frequency pair, and pair *l* is rotated by the angle (*i − j*)·θ<sub>*l*</sub>. HiSA keeps the score part of pair
@@ -139,7 +139,7 @@ third_party/flash-attention  submodule: the FlashAttention-3 fork with the Flash
 @article{borbely2026hisa,
   title   = {HiSA: Sparsifying the Hidden Dimension of RoPE Attention in LLMs},
   author  = {Borbely, Ambroise and Salzmann, Mathieu and Verscheure, Olivier},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2611.26363},
   year    = {2026}
 }
 ```
